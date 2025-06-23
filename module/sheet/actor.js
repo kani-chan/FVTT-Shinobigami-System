@@ -65,27 +65,28 @@ export class ShinobigamiActor extends Actor {
         if ('dirty' in data.system.health) {
           for (let a = 0; a < Object.keys(data.system.health.dirty).length; ++a) {
             let i = Object.keys(data.system.health.dirty)[a];
+            if (dirty[i] != data.system.health.dirty[i]) {
+              if (data.system.health.dirty[i])
+                count -= 1;
+              else
+                count += 1;
+            }
             dirty[i] = data.system.health.dirty[i];
-
-            if (data.system.health.dirty[i])
-              count -= 1;
-            else
-              count += 1;
           }
         }
 
         if ('state' in data.system.health) {
           for (let a = 0; a < Object.keys(data.system.health.state).length; ++a) {
             let i = Object.keys(data.system.health.state)[a];
+            if (health[i] != data.system.health.state[i]) {
+              if (data.system.health.state[i])
+                count -= 1;
+              else
+                count += 1;
+            }
             health[i] = data.system.health.state[i];
-
-            if (data.system.health.state[i])
-              count -= 1;
-            else
-              count += 1;
           }
         }
-
         data.system.health.value = ('value' in data.system.health) ? data.system.health.value + count : this.system.health.value + count;
       }
 

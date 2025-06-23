@@ -86,14 +86,18 @@ export class ShinobigamiActorSheet extends ActorSheet {
     actorData.finishList = [];
     actorData.backgroundList = [];
     actorData.handoutList = [];
+    actorData.totalItemsQty = 0;
 
     for (let i of data.items) {
         if (i.type === 'ability')
             actorData.abilityList.push(i);
         else if (i.type == 'bond')
             actorData.bondList.push(i);
-        else if (i.type == 'item')
-            actorData.itemList.push(i);
+        else if (i.type == 'item') {
+          actorData.itemList.push(i);
+          console.log(i.system.quantity)
+          actorData.totalItemsQty += Number(i.system.quantity) || 0;
+        }
         else if (i.type == 'finish')
             actorData.finishList.push(i);
         else if (i.type == 'background')
