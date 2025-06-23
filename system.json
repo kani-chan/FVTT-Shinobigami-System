@@ -1,18 +1,18 @@
 {
-  "id": "shinobigami",
-  "title": "Shinobigami System",
-  "description": "Shinobigami system",
+  "id": "shinobigami-kani",
+  "title": "Shinobigami System(fork by kani)",
+  "description": "Shinobigami system(fork by kani)",
   "version": "1.3.8",
   "compatibility": {
     "minimum": 11,
-    "verified": "11.315"
+    "verified": "12.343"
   },
   "templateVersion": 9,
   "authors": [
     {
-      "name": "ltaeng",
-      "email": "ksx0330@gmail.com",
-      "discord": "Ltaeng#2837"
+      "name": "kanichang",
+      "email": "",
+      "discord": "kanichang"
     }
   ],
   "esmodules": ["module/init.js"],
@@ -47,8 +47,8 @@
   "gridUnits": "ft",
   "socket": true,
   "primaryTokenAttribute": "health",
-  "url": "https://github.com/ksx0330/FVTT-Shinobigami-System",
-  "manifest": "https://raw.githubusercontent.com/ksx0330/FVTT-Shinobigami-System/master/system.json",
-  "download": "https://codeload.github.com/ksx0330/FVTT-Shinobigami-System/zip/master",
+  "url": "https://github.com/kani-chan/FVTT-Shinobigami-System",
+  "manifest": "https://raw.githubusercontent.com/kani-chan/FVTT-Shinobigami-Systemsystem.json",
+  "download": "https://codeload.github.com/kani-chan/FVTT-Shinobigami-System/zip/master",
   "license": "LICENSE.txt"
 }
